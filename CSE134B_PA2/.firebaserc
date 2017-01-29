@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "stickdex-749ae",
+    "staging": "lipstickdex"
+  }
+}
