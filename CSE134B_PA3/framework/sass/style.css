@@ -1,5 +1,36 @@
 @import url(../node_modules/picnic/picnic.min.css);
-body {
-  border: 15px double red; }
+@font-face {
+  font-family: SignPainter;
+  src: url(SignPainter.ttf); }
+body nav {
+  background: url(../pics/banner.jpg);
+  display: block;
+  height: 25%; }
+  body nav div {
+    width: 100%;
+    text-align: center;
+    display: block;
+    float: left; }
+    body nav div a {
+      color: white; }
+  body nav #title {
+    color: white;
+    font-family: SignPainter;
+    font-size: 4em; }
+  body nav #menu {
+    line-height: normal; }
+    body nav #menu .button {
+      color: white; }
+    body nav #menu a {
+      margin: 0;
+      font-size: 2em;
+      font-family: SignPainter; }
+body .addstick {
+  width: 100%;
+  display: block;
+  float: left;
+  border: 3px solid green; }
+body .display-box {
+  border: 2px solid black; }
 
 /*# sourceMappingURL=style.css.map */

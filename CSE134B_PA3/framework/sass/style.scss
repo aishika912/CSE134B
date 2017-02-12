@@ -1,5 +1,47 @@
 @import "../node_modules/picnic/picnic.min.css";
+@font-face {
+	font-family: SignPainter;
+	src: url(SignPainter.ttf);
+}
 
 body {
-	border: 15px double red;
+	nav {
+		background: url(../pics/banner.jpg);
+		display: block;
+		height: 25%;
+		div {
+			width: 100%;
+			text-align: center;
+			display: block;
+			float: left;
+			a {
+				color: white;
+			}
+		}
+		#title {
+			color: white;
+			font-family: SignPainter;
+			font-size: 4em;
+		}
+		#menu {
+			line-height: normal;
+			.button {
+				color: white;
+			}
+			a {
+				margin: 0;
+				font-size: 2em;
+				font-family: SignPainter;
+			}
+		}
+	}
+	.addstick {
+		width: 100%;
+		display: block;
+		float: left;
+		border: 3px solid green;
+	}
+	.display-box {
+		border: 2px solid black;
+	}
 }
