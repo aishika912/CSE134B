@@ -14,7 +14,7 @@ body {
 		position: static;
 		text-align: center;
 		background-size: cover;
-		/*background: url(../pics/banner.jpg);*/
+		background: url(../pics/banner.jpg);
 		#title {
 			color: white;
 			text-shadow: -2px 0 PaleVioletRed , 0 2px PaleVioletRed , 2px 0 PaleVioletRed , 0 -2px PaleVioletRed;
@@ -27,8 +27,9 @@ body {
 		position: sticky;
 		z-index: 100;
 		height: 13.1vmin;
+		background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
 		background-position-y:-6vmax !important;
-		/*background: url(../pics/banner.jpg);*/
+		background: url(../pics/banner.jpg);
 		
 		label {
 			position: static;
@@ -72,7 +73,7 @@ body {
 	   		.addstick {
 	   			width: 80%;
 	   			font-family: Ugo;
-	   			font-size: 3vmin;
+	   			width: 20%;
 	   		}
 		}
 		.flex {

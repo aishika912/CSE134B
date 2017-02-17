@@ -11,7 +11,7 @@ body #title-div {
   position: static;
   text-align: center;
   background-size: cover;
-  /*background: url(../pics/banner.jpg);*/ }
+  background: url(../pics/banner.jpg); }
   body #title-div #title {
     color: white;
     text-shadow: -2px 0 PaleVioletRed , 0 2px PaleVioletRed , 2px 0 PaleVioletRed , 0 -2px PaleVioletRed;
@@ -22,8 +22,9 @@ body nav {
   position: sticky;
   z-index: 100;
   height: 13.1vmin;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   background-position-y: -6vmax !important;
-  /*background: url(../pics/banner.jpg);*/ }
+  background: url(../pics/banner.jpg); }
   body nav label {
     position: static;
     padding-top: 2%;
@@ -60,7 +61,7 @@ body #main-body {
     body #main-body .add-button-container .addstick {
       width: 80%;
       font-family: Ugo;
-      font-size: 3vmin; }
+      width: 20%; }
   body #main-body .flex {
     margin: 0;
     padding: 0; }
