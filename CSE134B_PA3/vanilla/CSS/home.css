@@ -29,6 +29,8 @@ body {
 nav {
 	background-image:url("../IMG/banner.jpg");
 	height: 150px;
+	position: fixed;
+	width: 100%;
 	/*filter: brightness(50%);
 	*/
 	/*text-align:center;
@@ -133,6 +135,7 @@ nav {
 	padding-bottom: 7px;
 	border-radius: 5px;
 	border:none;
+	margin-top: 200px;
 }
 
 h3 {
@@ -271,6 +274,27 @@ li {
 }
 
 
+#scrollpadding1 {
+	height: 120px;
+	border: red 2px solid;
+	visibility: hidden;
+}
+
+#scrollpadding2 {
+	height: 120px;
+	border: red 2px solid;
+	visibility: hidden;
+}
+
+
+#temp {
+	border: black solid 2px;
+	text-align: center;
+	padding-top:400px;
+	padding-bottom: 400px;
+	margin-right: 20px;
+}
+
 
 /*@media screen and (max-width: 700px){
   .box{
@@ -280,12 +304,6 @@ li {
     width: 70%;
   }
 }*/
-
-
-
-
-
-
 
 
 
