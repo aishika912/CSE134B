@@ -14,56 +14,242 @@
 		<div>
 			<a href="home.html" id="title">StickDex</a>
 		</div>
-		<!-- responsive-->
-		<label for="bmenub" class="burger pseudo button">Menu</label>
-
-		<div id="menu">
-			<a href="#collection" class="pseudo button">My Collections</a>
-			<a href="#wishlist" class="pseudo button">My Wishlist</a>
-		</div>
-	</nav>
-	<div class="flex demo">
-		<div><span>1</span></div>
-		<div><span>2</span></div>
-		<div><span>3</span></div>
-		<div><span>4</span></div>
-		<div><span>5</span></div>
-		<div><span>6</span></div>
+		<!-- responsive
+		<input id="bmenub" type="checkbox" class="show">
+		<label for="bmenub" class="burger pseudo button">menu</label>
+	-->
+	<div class="menu flex one-500 three-600">
+		<div><a href="#current-collection" id="collection" class="pseudo button">My Collection</a></div>
+		<div><a href="#my-wishlist" id="wishlist" class="pseudo button">My Wishlist</a></div>
+		<div><a href="#search" id="search" class="pseudo button">Search</a></div>
 	</div>
-	<a href="addstick.html" class="pseudo success button addstick">Add Stick</a>
-	<h3>Wish List</h3>
-	<div class="display-box">
-		<ul>
-			<li>
-				<a href="stickinfo.html"><img src="lipstick.jpg" style="width:80px;height:100px;" alt="lipstickimg"></a>
-			</li>
-			<li>
-				<a href="stickinfo.html"><img src="lipstick.jpg" style="width:80px;height:100px;" alt="lipstickimg"></a>
-			</li>
-			<li>
-				<a href="stickinfo.html"><img src="lipstick.jpg" style="width:80px;height:100px;" alt="lipstickimg"></a>
-			</li>
-			<li>
-				<a href="stickinfo.html"><img src="lipstick.jpg" style="width:80px;height:100px;" alt="lipstickimg"></a>
-			</li>
-		</ul>
+		<!--
+		<div class="menu">
+			<a href="#" class="pseudo button">My Collection</a>
+			<a href="#" class="pseudo button">My Wishlist</a>
+			<a href="#" class="pseudo button">Search</a>
+		</div>
+	-->
+</nav>
+<div id="main-body">
+	<div class="add-button-container">
+		<label for="modal_1" class="success button addstick">ADD STICK</label>
+	</div>
+
+	<div class="modal">
+		<input id="modal_1" type="checkbox"/>
+		<label for="modal_1" class="overlay"></label>
+		<article>
+			<header>
+				<h3>Add a lipstick to your collection</h3>
+				<label for="modal_1" class="close">&times;</label>
+			</header>
+			<section class="content">
+				<form>
+					<span>
+						Name:<br>
+						<input type="text">
+					</span>
+					<span>
+						<br>Price:<br>
+						<input type="text">
+					</span>
+					<span >
+						<br>Color:<br>
+						<input type="text"> <br>
+					</span>
+					<span>
+						Lipstick Type:
+						<select>
+							<option>Lipstick</option>
+							<option>Liquid</option>
+							<option>Lip Gloss</option>
+							<option>Lip Liner</option>
+						</select>
+						<br/><br/>
+						<label>
+							<input type='radio' name="radiodemo">
+							<span class="checkable">Own?</span>
+						</label>
+					</span>
+				</form>
+			</section>
+			<footer>
+				<input type="submit" value="Add to Collection">
+			</footer>
+		</article>
+	</div>
+
+
+	<h3 id="my-wishlist">Wish List</h3>
+	<div class="flex two three-600 six-1200">
+
+		<label for="modal_2" class="button pseudo lipbox">
+			<div class="lipstick-box">
+				<img src="lipstick.jpg" style="width:80px;height:100px;" alt="lipstickimg">
+				<div class="description">
+					<span class="stack">Lâncome</span>
+					<span class="stack">Ruby Red</span>
+					<span class="stack">$53</span>
+				</div>
+			</div>
+		</label>
+		<div class="modal">
+			<input id="modal_2" type="checkbox" />
+			<label for="modal_2" class="overlay"></label>
+			<article>
+				<header>
+					<h3>Edit Lipstick</h3>
+					<label for="modal_2" class="close">&times;</label>
+				</header>
+				<section class="content">
+					<img src="lipstick.jpg" style="width:80px;height:100px;" alt="lipstickimg">
+					<fieldset class="flex three">
+						<span>Name:</span>
+						<label><input type="Name" placeholder="Lâncome"></label>
+						<span>Price:</span>
+						<label><input type="Price" placeholder="$53"></label>
+						<label>
+							<input type='radio' name="radiodemo">
+							<span class="checkable">Own?</span>
+						</label>
+					</fieldset>
+				</section>
+				<footer>
+					<input type="submit" value="Update Lipstick">
+					<input type="submit" class="error" value="Remove Lipstick">
+				</footer>
+			</article>
+		</div>
+
+
+
+		
 	</div>
 	<h3>My Looks</h3>
-	<h3>Current Collection</h3>
-	<div class="display-box">
-		<ul>
-			<li>
-				<a href="stickinfo.html"><img src="lipstick.jpg" style="width:80px;height:100px;" alt="lipstickimg"></a>
-			</li>
-		</ul>
+	<h3 id="current-collection">Current Collection</h3>
+	<div class="flex two three-600 six-1200">
+
+		<label for="modal_2" class="button pseudo lipbox">
+			<div class="lipstick-box">
+				<img src="lipstick.jpg" style="width:80px;height:100px;" alt="lipstickimg">
+				<div class="description">
+					<span class="stack">Lâncome</span>
+					<span class="stack">Ruby Red</span>
+					<span class="stack">$53</span>
+				</div>
+			</div>
+		</label>
+		<div class="modal">
+			<input id="modal_2" type="checkbox" />
+			<label for="modal_2" class="overlay"></label>
+			<article>
+				<header>
+					<h3>Edit Lipstick</h3>
+					<label for="modal_2" class="close">&times;</label>
+				</header>
+				<section class="content">
+					<img src="lipstick.jpg" style="width:80px;height:100px;" alt="lipstickimg">
+					<fieldset class="flex three">
+						<span>Name:</span>
+						<label><input type="Name" placeholder="Lâncome"></label>
+						<span>Price:</span>
+						<label><input type="Price" placeholder="$53"></label>
+						<label>
+							<input type='radio' name="radiodemo">
+							<span class="checkable">Own?</span>
+						</label>
+					</fieldset>
+				</section>
+				<footer>
+					<input type="submit" value="Update Lipstick">
+					<input type="submit" class="error" value="Remove Lipstick">
+				</footer>
+			</article>
+		</div>
+
+		<label for="modal_2" class="button pseudo lipbox">
+			<div class="lipstick-box">
+				<img src="lipstick.jpg" style="width:80px;height:100px;" alt="lipstickimg">
+				<div class="description">
+					<span class="stack">Lâncome</span>
+					<span class="stack">Ruby Red</span>
+					<span class="stack">$53</span>
+				</div>
+			</div>
+		</label>
+		<div class="modal">
+			<input id="modal_2" type="checkbox" />
+			<label for="modal_2" class="overlay"></label>
+			<article>
+				<header>
+					<h3>Edit Lipstick</h3>
+					<label for="modal_2" class="close">&times;</label>
+				</header>
+				<section class="content">
+					<img src="lipstick.jpg" style="width:80px;height:100px;" alt="lipstickimg">
+					<fieldset class="flex three">
+						<span>Name:</span>
+						<label><input type="Name" placeholder="Lâncome"></label>
+						<span>Price:</span>
+						<label><input type="Price" placeholder="$53"></label>
+						<label>
+							<input type='radio' name="radiodemo">
+							<span class="checkable">Own?</span>
+						</label>
+					</fieldset>
+				</section>
+				<footer>
+					<input type="submit" value="Update Lipstick">
+					<input type="submit" class="error" value="Remove Lipstick">
+				</footer>
+			</article>
+		</div>
+
+		<label for="modal_2" class="button pseudo lipbox">
+			<div class="lipstick-box">
+				<img src="lipstick.jpg" style="width:80px;height:100px;" alt="lipstickimg">
+				<div class="description">
+					<span class="stack">Lâncome</span>
+					<span class="stack">Ruby Red</span>
+					<span class="stack">$53</span>
+				</div>
+			</div>
+		</label>
+		<div class="modal">
+			<input id="modal_2" type="checkbox" />
+			<label for="modal_2" class="overlay"></label>
+			<article>
+				<header>
+					<h3>Edit Lipstick</h3>
+					<label for="modal_2" class="close">&times;</label>
+				</header>
+				<section class="content">
+					<img src="lipstick.jpg" style="width:80px;height:100px;" alt="lipstickimg">
+					<fieldset class="flex three">
+						<span>Name:</span>
+						<label><input type="Name" placeholder="Lâncome"></label>
+						<span>Price:</span>
+						<label><input type="Price" placeholder="$53"></label>
+						<label>
+							<input type='radio' name="radiodemo">
+							<span class="checkable">Own?</span>
+						</label>
+					</fieldset>
+				</section>
+				<footer>
+					<input type="submit" value="Update Lipstick">
+					<input type="submit" class="error" value="Remove Lipstick">
+				</footer>
+			</article>
+		</div>
+
+		
 	</div>
-	<br><br>
-	<a href="../index.html">&lt;&lt; Back to Site Map</a>
-	<br><br>
 	<address>
 		Written by Anindya Basu and Aishika Kumar <br>
-		<a href="../team.html">Team Page</a>
 	</address>
+</div>
 </body>
 
 </html>

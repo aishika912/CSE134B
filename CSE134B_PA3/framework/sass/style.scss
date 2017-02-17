@@ -3,12 +3,16 @@
 	font-family: SignPainter;
 	src: url(SignPainter.ttf);
 }
-
+@font-face {
+	font-family: Ugo;
+	src: url(UGO-COLOR.ttf);
+}
 body {
 	nav {
+		position: static;
+		height: 10em;
+		background-size: contain;
 		background: url(../pics/banner.jpg);
-		display: block;
-		height: 25%;
 		div {
 			width: 100%;
 			text-align: center;
@@ -23,25 +27,97 @@ body {
 			font-family: SignPainter;
 			font-size: 4em;
 		}
-		#menu {
-			line-height: normal;
+		label {
+			position: static;
+			padding-top: 2%;
+			text-align: center;
+			width: 100%;
+			margin: 0 auto;
+			float: none;
+		}
+		.menu {
+			position: static;
+			padding-top: 2%;
+			text-align: center;
+			width: 100%;
+			margin: 0 auto;
+			float: none;
 			.button {
 				color: white;
 			}
+			div {
+				width: 25%;
+				margin: 0 auto;
+			}
 			a {
+				padding: 0;
 				margin: 0;
 				font-size: 2em;
 				font-family: SignPainter;
 			}
 		}
 	}
-	.addstick {
-		width: 100%;
-		display: block;
-		float: left;
-		border: 3px solid green;
+	#main-body {
+		width: 90%;
+		position: static;
+		margin: 0 auto;
+		.add-button-container {
+			text-align: center;
+	    	display: block;
+	   		margin: 0 auto;
+	   		.success {
+	   			background-color: #008080;
+	   		}
+	   		.addstick {
+	   			width: 80%;
+	   			font-family: Ugo;
+	   			width: 20%;
+	   		}
+		}
+		.flex {
+			.lipbox {
+				padding: 0;
+				width: 7em;	
+				&:hover {
+					box-shadow: none;
+				}
+				.lipstick-box {
+					text-align: center;
+					.description {
+						width: 60%;
+						margin: 0 auto;
+						span {
+							font-family: Helvetica;
+							color: black;
+							font-size: 11px;
+							text-align: center;
+						}
+					}
+				}
+				img {
+
+				}
+			}
+		}
+		h3 {
+			font-size: 2em;
+			font-family: SignPainter;
+		}
 	}
-	.display-box {
-		border: 2px solid black;
+	.modal {
+		input[type=checkbox] {
+			opacity: 1;
+		}
+		article {
+			width: 20em;
+			label {
+				padding: 0;
+				input {
+					width: 100%;
+				}
+			}
+		}
+
 	}
+
 }
