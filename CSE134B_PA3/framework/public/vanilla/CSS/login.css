@@ -1,0 +1,95 @@
+@font-face {
+	font-family:UgoFont;
+	src: url(../UGO-COLOR.ttf);
+}
+@font-face {
+	font-family: scriptFont;
+	src: url(../SignPainter-HouseScript.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+	background-image:url("../IMG/banner.jpg");
+	height: 150px;
+	/*filter: brightness(50%);
+	*/
+	/*text-align:center;
+	/*margin-top:0;
+	padding-top:0;*/
+}
+
+.homelink {
+	font-size: 70px;
+	padding-top: 25px;
+	font-family:scriptFont;
+	text-align: center;
+}
+
+a:link,
+a:visited {
+	text-decoration: none;
+	color:white;
+}
+
+a {
+	text-decoration: none;
+	color:white;
+}
+
+p {
+	text-align: center;
+	font-size: 35px;
+	font-family: scriptFont;
+}
+
+
+form {
+	padding-top: 20px;
+	text-align:center;
+	font-family:"helvetica";
+	font-size:15px;
+}
+
+
+form input {
+	height: 20px;
+	width: 150px;
+}
+
+.loginbtn {
+	font-family: UGOFont;
+	font-size:15px;
+	background-color: #008080;
+	color: white;
+	margin-top: 40px;
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	border-radius: 5px;
+	border:none;
+}
+
+#newuserbtn {
+	font-family: "helvetica";
+	font-size: 15px;
+	padding-left:10px;
+	color: black;
+}
+
+#newuserbtn:link,
+#newuserbtn:visited {
+	color:black;
+	text-decoration: none;
+}
+
+#newuserbtn:hover {
+	color:#008080;
+}
+
+
+
