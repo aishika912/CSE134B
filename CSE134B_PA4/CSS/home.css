@@ -330,8 +330,10 @@ li {
 	padding-bottom: 400px;
 	margin-right: 20px;
 }
-
-
+/* CANVAS CSS */
+#graph-box {
+	border: 1px solid black;
+}
 
 
 
