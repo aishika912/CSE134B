@@ -12,7 +12,7 @@ body {
     padding: 0;
 }
 
-
+/*
 #logout {
 	font-family:scriptFont;
 	float:right;
@@ -21,11 +21,11 @@ body {
 	padding-right: 15px;
 	padding-top: 5px;
 }
-
+*/	
 
 /* Set a style for all buttons */
 button {
-    background-color: #4CAF50;
+    background-color: #008080; /*#4CAF50;*/
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -33,22 +33,29 @@ button {
     cursor: pointer;
     font-size: 0.8em;
 }
+#practice {
+	text-align: right;
+	padding:0;
+	padding-right: 15px;
+}
 #signOut {
-	font-size: 15px;
-	padding: 0;
-	height: 30px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	width: 120px;
-	margin: 10px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	/*
 	float: right;
 	background-color: #4CAF50;
     color: white;
     border: none;
     cursor: pointer;
+    */
 }
 
 
 nav {
-	background-image:url("../IMG/banner.jpg");
+	background-image:url("../IMG/banner1.jpg");
 	height: 150px;
 	position: fixed;
 	width: 100%;
@@ -57,15 +64,28 @@ nav {
 	/*text-align:center;
 	/*margin-top:0;
 	padding-top:0;*/
+	background-position: center;
+	text-align: center;
 }
 
 .homelink {
 	font-size: 70px;
-	padding-top: 25px;
 	font-family:scriptFont;
 	text-align: center;
-}
 
+	display: inline-block;
+	padding-left:8px;
+	padding-right: 8px;
+	/*padding-top: 10px;*/
+  	font-family:scriptFont;
+  	text-align: center;
+	/*background-color: rgba(0,0,0,0.5);*/
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
 
 /*.navbarlinks {
 	font-size: 30px;
@@ -73,7 +93,7 @@ nav {
 	margin-top: 30px;
 }*/
 
-@media(min-width: 600px){
+/*@media(min-width: 600px){*/
 	.dropbtn {
 		display:none;
 	}
@@ -89,7 +109,6 @@ nav {
 		margin-right:50px;	
 		margin-left:50px;
 	}
-}
 
 @media (max-width: 600px) {
 	.dropbtn {
@@ -105,22 +124,16 @@ nav {
 	}
 
 	.dropdown {
+
 		position: relative;
 		/*display:inline-block;*/
 	}
 
 	.navbarlinks {
-		display: none;
-		position: absolute;
-		left:300px;
-		z-index:1;
-		min-width: 160px;
-		background-color: rgba(0,0,0,0.5);
-		/*border: blue 2px solid;*/
-		/*margin-right: 300px;*/
-		box-shadow: 0px 8px 16px 0px rgba(s0,0,0,0.2);
-		text-align:center;
-		padding:5px;
+		font-family: scriptFont;
+		font-size: 30px;
+		text-align: center;
+		padding-top: 10px;
 	}
 
 	.navbarlinks a {

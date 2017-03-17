@@ -38,28 +38,65 @@ function displaySticksFn(data) {
 	//console.log("MADE IT");
 	var lipsticks = data.val();
 	var keys = Object.keys(lipsticks);
+
+	var own_total = 0;
+	var want_total = 0;
+
+	var own_number = 0;
+	var want_number = 0;
 	//console.log("MADE IT");
 	for (var i = 0; i < keys.length; ++i) {
 		var k = keys[i];
 		if (lipsticks[k].own == true) {
 			addStickToOwn(k);
+			/* color chart */
 			var colorBox = document.createElement("div");
 			colorBox.className += "color-box"
 			colorBox.style.backgroundColor = lipsticks[k].color;
 			document.getElementById("data-owned").appendChild(colorBox);
+
+			/* price analysis */
+			own_number++;
+			own_total += parseInt(lipsticks[k].price);
 		}
 		else {
+			/* color chart */
 			addStickToWant(k);
 			var colorBox = document.createElement("div");
 			colorBox.className += "color-box"
 			colorBox.style.backgroundColor = lipsticks[k].color;
 			document.getElementById("data-wanted").appendChild(colorBox);
+
+			/* price analysis */
+			want_number++;
+			want_total += parseInt(lipsticks[k].price);
 		}
 		//console.log(k);
 	}
-
-	//log(data.val());
-
+	if (own_total > 0) {
+		var own_average = document.createElement("h4");
+		var span_wrap = document.createElement("span");
+		var num = own_total / own_number;
+		span_wrap.style.color = "#008B8B";
+		span_wrap.innerHTML = "$";
+		span_wrap.innerHTML = span_wrap.innerHTML + num;
+		own_average.innerHTML = "So far you have spent ";
+		own_average.appendChild(span_wrap);
+		own_average.innerHTML += " on lipsticks.";
+		document.getElementById("data-info").appendChild(own_average);
+	}
+	if (want_total > 0) {
+		var want_average = document.createElement("h4");
+		var span_wrap = document.createElement("span");
+		var num2 = want_total / want_number;
+		span_wrap.style.color = "#008B8B";
+		span_wrap.innerHTML = "$";
+		span_wrap.innerHTML = span_wrap.innerHTML + num2;
+		want_average.innerHTML = "Your wishlist's average cost is ";
+		want_average.appendChild(span_wrap);
+		want_average.innerHTML += " on lipsticks.";
+		document.getElementById("data-info").appendChild(want_average);
+	}
 }
 function displayWantData() {
 	firebase.auth().onAuthStateChanged(function(currentUser) {
@@ -87,7 +124,7 @@ function addStickFn() {
 		    var theColor = colorVal.value;
 		    var theType = typeVal.value;
 		    var theOwn = ownVal.checked;
-		    var key = theBrand + theName;
+		    var key = theBrand.replace(/ /g,'') + theName.replace(/ /g,'');
 
 		    var file = document.getElementById('uploadpic').files[0];
     		// the file is the first element in the files property
@@ -209,12 +246,13 @@ firebase.auth().onAuthStateChanged(function(currentUser) {
 */
 
 			//img.src = "lipstick.jpg";
-			img.width = "80";
+			img.width = "100";
 			img.height = "100";
 			//console.log(uniqueId);
 		    var att = "displayStickInfoFn(" + uniqueId +");";
 		    //console.log(att);
 			img.setAttribute("onclick", att);
+			console.log(att);
 		    //console.log(att);
 		    //a.appendChild(img);
 

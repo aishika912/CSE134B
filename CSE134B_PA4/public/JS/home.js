@@ -38,26 +38,52 @@ function displaySticksFn(data) {
 	//console.log("MADE IT");
 	var lipsticks = data.val();
 	var keys = Object.keys(lipsticks);
+
+	var own_total = 0;
+	var want_total = 0;
+
+	var own_number = 0;
+	var want_number = 0;
 	//console.log("MADE IT");
 	for (var i = 0; i < keys.length; ++i) {
 		var k = keys[i];
 		if (lipsticks[k].own == true) {
 			addStickToOwn(k);
+			/* color chart */
 			var colorBox = document.createElement("div");
 			colorBox.className += "color-box"
 			colorBox.style.backgroundColor = lipsticks[k].color;
 			document.getElementById("data-owned").appendChild(colorBox);
+
+			/* price analysis */
+			own_number++;
+			own_total += parseInt(lipsticks[k].price);
 		}
 		else {
+			/* color chart */
 			addStickToWant(k);
 			var colorBox = document.createElement("div");
 			colorBox.className += "color-box"
 			colorBox.style.backgroundColor = lipsticks[k].color;
 			document.getElementById("data-wanted").appendChild(colorBox);
+
+			/* price analysis */
+			want_number++;
+			want_total += parseInt(lipsticks[k].price);
 		}
 		//console.log(k);
 	}
+	var own_average = document.createElement("h4");
+	var num = own_total / own_number;
+	own_average.textContent = "So far you have spent $" + num + " on lipsticks.";
+	document.getElementById("data-info").appendChild(own_average);
 
+	var want_average = document.createElement("h4");
+	console.log("want total = " + want_total);
+	console.log("want number = " + want_number);
+	var num2 = want_total / want_number;
+	want_average.textContent = "Your wish list costs $" + num2 + ".";
+	document.getElementById("data-info").appendChild(want_average);
 	//log(data.val());
 
 }
